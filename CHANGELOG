@@ -1,0 +1,87 @@
+v 1.0rc1 (0.994)
+	- bug with counter overflow (@ some CPUs)
+	     (bugreport by Alexander Matveev Alexander.Matveev[at]teleca.com)
+
+v 0.993
+	* minor changes in makefile
+	+ int64 support for options (no more 2Gb limit for -r option)
+
+v 0.992
+	- stupid bug with -p option
+	* note for double-clickers
+
+v 0.991
+
+	- image file do not locking (FILE_SHARE_READ) while loading to media 
+	+ allow parallel image loading by few copies of flashnul 
+		(bugreport by Mick T. Lyalin lialin[at]yandex.ru)
+	* small behavior changes for -h/-v options
+
+v 0.99
+	* minor fixes
+	+ update mode
+
+v 0.9
+	+ 99 (insead 9) drive support
+	+ speed counters
+	* incresized speed of block operations (r/w)
+	- bug with duplicate --block option.
+	- bug with permanent "0%" in delta size in report
+	+ configuration file "flashnul.conf"
+	+ block-letter and block-number options
+
+v 0.8
+	* FILE_SHARE_READ|FILE_SHARE_WRITE changed to FILE_SHARE_READ.
+	+ new key --write-share for enabling write share.
+	* new physical drive list.
+	+ new information (bus, removablility, serial number, name).
+	+ option -p now take a parameter (bitset of tests).
+	- waiting time at the test end if drive size unknown.
+	- -V mode trap for --load option.
+	+ keys for block writing (see help, --block-* options)
+
+v 0.7
+
+	! new drive size detection (bug with 'invisible' surplus sectors)
+	- minor UI bug in bitdump
+	- image file (-L/-S) do not close until end of program
+	- -T option override -d,-V,-m options
+	* minor changes in logical disk list
+
+v 0.6
+	+ -T option as set of (-I -V=3 -m=1 options)
+	+ bitdump in case of difference of wrote and reed (first 16 bytes)
+	+ -k option for disable [Enter] prompt at exit
+	- minor bug with default values
+	- minor UI bugs with leftover ')' on screen
+	? warning messages at run
+
+v 0.5 
+
+	* now "Press [Enter] to exit" apear even in case of error.
+	- memory leak in -V=0 mode
+	+ -d (--delay) option to set delay before re-read test (in sec)
+	+ -m (--mode) modes for -I test (-m=0, -m=1)
+
+v 0.4
+	- minor fix in generate.c (check for size of allocation memory)
+	* option -r renamed to -R
+	* parameters from -R, -I, -F options moved to -b option.
+	+ --load (-L) option (load image to disk)
+	+ --save (-S) option (save image from disk to file)
+	+ --block-size (-b) option for I/O operation
+	+ --range (-r) option for -S, -L, -F and -I options for set I/O range.
+	+ argument for -F (fill value)
+	+ argument for -I (init value)
+
+v 0.3
+
+	* small improvment in human_view().
+	+ logical disks list in -p mode.
+	* now GetDiskFreeSpace() do not calling for physical drives.
+	- error with encoding for error messages in non-english Windows.
+
+v 0.2
+	first public release
+
+

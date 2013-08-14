@@ -1,0 +1,10 @@
+version 1 has been stopped (only bugfixes before release)
+
+version 2 (roadmap):
+* creating partition table, changing attributes (boot, fs type)
+* formating of partition (no sure..., may be by exec of 'format'?)
+* unpaking builtin image of DOS in winNT/2k/XP 
+    allowing to make boot flash without MSDOS files not only on flash)
+
+v 3 (long long way to go)
+* advanced raw recovery (contintue reding after device replugging after fault)

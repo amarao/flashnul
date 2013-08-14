@@ -1,0 +1,12 @@
+#verify=0
+# verify: use a verification (mode = 1,2,3)
+
+#no-prompt=0
+# no-prompt: do not prompt about destructive functions
+
+#ignore-errors=0
+# ignore-errors: ignore errors (do not stop after first error)
+
+#cycle=0
+# cycle: run operation given number of loops (-R,I,F)
+
