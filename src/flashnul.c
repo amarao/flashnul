@@ -311,6 +311,9 @@ int main( int argc, char* argv[] ){
 	int 		c		=	0;
 	int		mode		=	0;
 
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+
 	atexit( &end_message );
 
 	command_line =  ParseCommandLine(argc, argv, opt, 0, 1, CLA_FLAG_STOP_ALL_ERRORS );
