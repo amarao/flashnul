@@ -392,7 +392,7 @@ int main( int argc, char* argv[] ){
 	if( !dev ){
 		title_text2("Fail to open ",freeopt( config, 0 ));
 		claClose( config );
-		return 0;
+		return 1;
 	}
 
 	get_drive_info( dev, 0xFF, 0 ); /*FIX*/

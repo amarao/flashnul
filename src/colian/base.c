@@ -154,14 +154,14 @@ int SetArguments( const char* line, claOptName_t* optN, claCfgItem_t* optV ){
 	switch(args_type){
 
 		case CLA_TYPE_NUMBER:
-			optV->nlist = realloc( optV->nlist, optV->argNum+arguments * sizeof(CLA_INT) );
+		  optV->nlist = realloc( optV->nlist, (optV->argNum+arguments) * sizeof(CLA_INT) );
 			assert( optV->nlist );
 			for( j = 0; j < arguments; j++ )
 				optV->nlist[ j + optV->argNum ] = 0;
 		break;
 
     	case CLA_TYPE_STRING:
-			optV->slist = realloc( optV->slist, optV->argNum+arguments * sizeof(char**) );
+			optV->slist = realloc( optV->slist, (optV->argNum+arguments) * sizeof(char*) );
 			assert(optV->slist);
 			for(j=0;j<arguments;j++)
 				optV->slist[j+optV->argNum]=NULL;
