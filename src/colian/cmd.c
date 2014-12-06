@@ -224,7 +224,7 @@ claCfg_t* claParseCommandLine(
 				}else{/*option without '='*/
 					if( OptList[ID].optType & CLA_TYPE_SWITCH ){
 						retval->item[ID].argNum++;
-						retval->item[ID].nlist = realloc (retval->item[ID].nlist,retval->item[ID].argNum );
+						retval->item[ID].nlist = realloc (retval->item[ID].nlist,retval->item[ID].argNum * sizeof(retval->item[ID].nlist[0]) );
 						assert( retval->item[ID].nlist );
 						retval->item[ID].nlist [retval->item[ID].argNum-1]++;
 						retval->item[ID].type = OptList[ID].optType;

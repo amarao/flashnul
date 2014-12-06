@@ -311,6 +311,9 @@ int main( int argc, char* argv[] ){
 	int 		c		=	0;
 	int		mode		=	0;
 
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+
 	atexit( &end_message );
 
 	command_line =  ParseCommandLine(argc, argv, opt, 0, 1, CLA_FLAG_STOP_ALL_ERRORS );
@@ -392,7 +395,7 @@ int main( int argc, char* argv[] ){
 	if( !dev ){
 		title_text2("Fail to open ",freeopt( config, 0 ));
 		claClose( config );
-		return 0;
+		return 1;
 	}
 
 	get_drive_info( dev, 0xFF, 0 ); /*FIX*/
